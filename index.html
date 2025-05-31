@@ -750,7 +750,7 @@
             { name: 'Sari Permata', location: 'Bandung, Jawa Barat', initial: 'S' },
             { name: 'Budi Santoso', location: 'Surabaya, Jawa Timur', initial: 'B' },
             { name: 'Maya Sari', location: 'Yogyakarta', initial: 'M' },
-            { name: 'Dian Pratama', location: 'Semarang, Jawa Tengah', initial: 'D' },
+            { name: 'Agnes Wastuti', location: 'Solo, Jawa Tengah', initial: 'D' },
             { name: 'Rina Handayani', location: 'Medan, Sumatera Utara', initial: 'R' },
             { name: 'Fandi Ahmad', location: 'Makassar, Sulawesi Selatan', initial: 'F' },
             { name: 'Lisa Amelia', location: 'Denpasar, Bali', initial: 'L' },
@@ -812,4 +812,28 @@
             elements.forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
-                el.style.transition = 'all 0.6
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        }
+        
+        // Initialize animations when page loads
+        window.addEventListener('load', animateOnScroll);
+        
+        // Add floating animation to hero image
+        const heroImage = document.querySelector('.hero-image img');
+        let floatDirection = 1;
+        
+        setInterval(() => {
+            const currentTransform = heroImage.style.transform || 'translateY(0px)';
+            const currentY = parseInt(currentTransform.match(/translateY\((-?\d+)px\)/) || [0, 0])[1];
+            
+            if (currentY >= 10) floatDirection = -1;
+            if (currentY <= -10) floatDirection = 1;
+            
+            const newY = currentY + (floatDirection * 2);
+            heroImage.style.transform = `translateY(${newY}px)`;
+        }, 100);
+    </script>
+</body>
+</html>
