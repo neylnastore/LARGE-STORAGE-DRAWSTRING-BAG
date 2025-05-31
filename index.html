@@ -1,1 +1,815 @@
-sddd
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multifunctional Fitness Travel Bag - Tas Serbaguna Terbaik untuk Gaya Hidup Aktif</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .hero-text .tagline {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            animation: slideInLeft 1.2s ease-out;
+        }
+
+        .hero-image {
+            text-align: center;
+            animation: slideInRight 1s ease-out;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(238, 90, 36, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(238, 90, 36, 0.6);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #2c3e50;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.5s;
+        }
+
+        .feature-card:hover::before {
+            left: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .feature-desc {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* Product Gallery */
+        .gallery {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Countdown Timer */
+        .countdown-section {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .time-unit {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 80px;
+        }
+
+        .time-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .time-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Price Banner */
+        .price-banner {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            position: sticky;
+            bottom: 0;
+            z-index: 1000;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .price-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .price-original {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .price-current {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .price-save {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        /* Popup Notification */
+        .popup-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 2000;
+            transform: translateX(400px);
+            transition: all 0.5s ease;
+        }
+
+        .popup-notification.show {
+            transform: translateX(0);
+        }
+
+        .popup-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: white;
+        }
+
+        .popup-text {
+            font-size: 0.9rem;
+        }
+
+        .popup-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .popup-location {
+            color: #7f8c8d;
+            font-size: 0.8rem;
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 10px 30px rgba(238, 90, 36, 0.4);
+            }
+            50% {
+                box-shadow: 0 15px 40px rgba(238, 90, 36, 0.6);
+            }
+            100% {
+                box-shadow: 0 10px 30px rgba(238, 90, 36, 0.4);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .countdown-timer {
+                gap: 15px;
+            }
+
+            .time-unit {
+                min-width: 60px;
+                padding: 15px;
+            }
+
+            .time-number {
+                font-size: 2rem;
+            }
+
+            .price-info {
+                gap: 15px;
+            }
+
+            .price-current {
+                font-size: 2rem;
+            }
+
+            .popup-notification {
+                right: 10px;
+                left: 10px;
+                transform: translateY(-100px);
+            }
+
+            .popup-notification.show {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Tas Fitness Travel Multifungsi Terbaik</h1>
+                    <p class="tagline">Sempurna untuk gaya hidup aktif Anda - gym, travel, dan aktivitas harian dalam satu tas premium!</p>
+                    <a href="https://vera.orderonline.id/large-storage-drawstring-bag-2" class="cta-button">PESAN SEKARANG</a>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="viewers">2,847</span>
+                            <span class="stat-label">Sedang Melihat</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="stock">47</span>
+                            <span class="stat-label">Stok Tersisa</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9/5</span>
+                            <span class="stat-label">Rating Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://cdn.hotishop.com/image/25b89224ce678d4065d95a983f3cbe680d875d3d-700.webp" alt="Multifunctional Fitness Travel Bag">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Tas Kami?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎒</div>
+                    <h3 class="feature-title">Kapasitas Besar & Organizer Cerdas</h3>
+                    <p class="feature-desc">Ruang luas dengan kompartemen terorganisir untuk sepatu, pakaian kotor, handuk, dan perlengkapan gym. Tidak perlu tas tambahan!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💧</div>
+                    <h3 class="feature-title">Tahan Air & Anti Bau</h3>
+                    <p class="feature-desc">Material premium water-resistant dengan lapisan anti-bakteri. Pakaian basah dan sepatu tidak akan merusak barang lain atau menimbulkan bau.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Desain Ergonomis & Stylish</h3>
+                    <p class="feature-desc">Tali adjustable yang nyaman di bahu, desain modern yang cocok untuk gym, kantor, atau traveling. Terlihat profesional di mana saja!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Ultra Ringan & Praktis</h3>
+                    <p class="feature-desc">Berat hanya 300 gram tapi super kuat! Bisa dilipat jadi compact saat tidak digunakan. Perfect untuk orang aktif yang mobile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Lihat Detail Produk</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://cdn.hotishop.com/image/7ccfc8e7e860c856846da642a40e23ce1ceb45fc-300.webp" alt="Detail tas fitness travel">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.hotishop.com/image/c28ee4eab1d211ff503f14e6c2b38942edf8c4ff.webp" alt="Compartement tas multifungsi">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.hotishop.com/image/25b89224ce678d4065d95a983f3cbe680d875d3d-700.webp" alt="Tas gym premium">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Mereka?</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Tas ini benar-benar game changer! Sekarang bisa gym sebelum kerja tanpa ribet bawa tas banyak. Kompartemen sepatu-nya genius banget!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AF</div>
+                        <div class="author-info">
+                            <h4>Andi Firmansyah</h4>
+                            <p>Karyawan Swasta, Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Awalnya ragu karena harganya, tapi setelah pakai 3 bulan ini worthit banget. Kualitas material bagus, jahitan rapi, dan super praktis untuk traveling."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <h4>Sari Ratnasari</h4>
+                            <p>Content Creator, Bandung</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Sebagai mahasiswa yang sering bolak-balik kampus-gym-kosan, tas ini perfect! Muat banyak tapi tetep stylish. Recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DP</div>
+                        <div class="author-info">
+                            <h4>Dian Pratama</h4>
+                            <p>Mahasiswa, Yogyakarta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Udah 6 bulan pakai dan masih kayak baru! Anti air beneran work, pernah kehujanan tas dalem tetep kering. Best investment ever!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>Maya Rosalina</h4>
+                            <p>Personal Trainer, Surabaya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="container">
+            <h2>⚡ FLASH SALE BERAKHIR DALAM ⚡</h2>
+            <p>Dapatkan DISKON 30% + FREE ONGKIR se-Indonesia!</p>
+            
+            <div class="countdown-timer">
+                <div class="time-unit">
+                    <span class="time-number" id="hours">07</span>
+                    <span class="time-label">Jam</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes">23</span>
+                    <span class="time-label">Menit</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds">45</span>
+                    <span class="time-label">Detik</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Banner -->
+    <div class="price-banner">
+        <div class="container">
+            <div class="price-info">
+                <span class="price-original">Rp 262.500</span>
+                <span class="price-current">Rp 175.000</span>
+                <span class="price-save">HEMAT 33%!</span>
+                <a href="https://vera.orderonline.id/large-storage-drawstring-bag-2" class="cta-button">PESAN SEKARANG</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Notification -->
+    <div class="popup-notification" id="popupNotification">
+        <div class="popup-avatar" id="popupAvatar">A</div>
+        <div class="popup-info">
+            <div class="popup-text">
+                <span class="popup-name" id="popupName">Andi</span> baru saja memesan
+            </div>
+            <div class="popup-location" id="popupLocation">Jakarta Selatan</div>
+        </div>
+    </div>
+
+    <script>
+        // Dynamic counters
+        let viewers = 2847;
+        let stock = 47;
+        
+        function updateCounters() {
+            // Simulate dynamic viewers (random changes)
+            viewers += Math.floor(Math.random() * 10) - 5;
+            if (viewers < 2800) viewers = 2800;
+            if (viewers > 3000) viewers = 3000;
+            
+            // Decrease stock occasionally
+            if (Math.random() < 0.1 && stock > 35) {
+                stock--;
+            }
+            
+            document.getElementById('viewers').textContent = viewers.toLocaleString();
+            document.getElementById('stock').textContent = stock;
+        }
+        
+        setInterval(updateCounters, 5000);
+
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const endTime = now + (7 * 60 * 60 * 1000) + (23 * 60 * 1000) + (45 * 1000); // 7h 23m 45s from now
+            
+            setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                if (distance < 0) {
+                    // Reset countdown
+                    endTime = now + (24 * 60 * 60 * 1000); // Reset to 24 hours
+                }
+            }, 1000);
+        }
+        
+        updateCountdown();
+
+        // Fake popup notifications
+        const customers = [
+            { name: 'Andi Wijaya', location: 'Jakarta Selatan', initial: 'A' },
+            { name: 'Sari Permata', location: 'Bandung, Jawa Barat', initial: 'S' },
+            { name: 'Budi Santoso', location: 'Surabaya, Jawa Timur', initial: 'B' },
+            { name: 'Maya Sari', location: 'Yogyakarta', initial: 'M' },
+            { name: 'Dian Pratama', location: 'Semarang, Jawa Tengah', initial: 'D' },
+            { name: 'Rina Handayani', location: 'Medan, Sumatera Utara', initial: 'R' },
+            { name: 'Fandi Ahmad', location: 'Makassar, Sulawesi Selatan', initial: 'F' },
+            { name: 'Lisa Amelia', location: 'Denpasar, Bali', initial: 'L' },
+            { name: 'Agus Kurniawan', location: 'Palembang, Sumatera Selatan', initial: 'A' },
+            { name: 'Tika Sari', location: 'Balikpapan, Kalimantan Timur', initial: 'T' }
+        ];
+
+        function showPopupNotification() {
+            const customer = customers[Math.floor(Math.random() * customers.length)];
+            const popup = document.getElementById('popupNotification');
+            
+            document.getElementById('popupName').textContent = customer.name;
+            document.getElementById('popupLocation').textContent = customer.location;
+            document.getElementById('popupAvatar').textContent = customer.initial;
+            
+            popup.classList.add('show');
+            
+            setTimeout(() => {
+                popup.classList.remove('show');
+            }, 4000);
+        }
+
+        // Show popup every 8-15 seconds
+        function scheduleNextPopup() {
+            const delay = 8000 + Math.random() * 7000; // 8-15 seconds
+            setTimeout(() => {
+                showPopupNotification();
+                scheduleNextPopup();
+            }, delay);
+        }
+
+        // Start popup notifications after 3 seconds
+        setTimeout(() => {
+            showPopupNotification();
+            scheduleNextPopup();
+        }, 3000);
+
+        // Smooth scrolling for CTA buttons
+        document.querySelectorAll('a[href^="https://vera.orderonline.id"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Track click event (you can add analytics here)
+                console.log('CTA clicked');
+            });
+        });
+
+        // Add scroll animations
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.feature-card, .gallery-item, .testimonial-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6
